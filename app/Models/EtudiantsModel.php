@@ -25,5 +25,9 @@ class EtudiantsModel extends Model
         return $this->where('id_etudiant', $id)->first();
     }
 
+    public function paginateEtudiants($perPage, $page) {
+        return $this->paginate($perPage, 'default', $page);
+    }
+
     
 }
