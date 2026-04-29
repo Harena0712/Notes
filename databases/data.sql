@@ -1,6 +1,6 @@
-CREATE DATABASE gestion_notesItu;
+CREATE DATABASE gestion_notesITU;
 
-use gestion_notesItu;
+use gestion_notesITU;
 
 CREATE TABLE responsables(
     id_responsable INT PRIMARY KEY AUTO_INCREMENT,
@@ -48,7 +48,8 @@ CREATE TABLE notes(
 
 CREATE TABLE users(
     id_user INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    role ENUM('admin', 'responsable') NOT NULL
+    email VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
 );
+
+INSERT INTO users (email, password) VALUES ('admin@sysinfo.mg', '123456');

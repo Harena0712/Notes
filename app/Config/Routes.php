@@ -5,7 +5,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/produits', 'Produit::index');
-$routes->get('/produit/(:num)', 'Produit::show/$1');
-$routes->get('/etudiants', 'Etudiant::index');
+$routes->get('/', 'UsersController::index');
+$routes->post('/login', 'UsersController::login');
+$routes->get('/etudiants', 'EtudiantController::list');
