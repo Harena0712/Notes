@@ -8,7 +8,8 @@ class EtudiantController extends BaseController
     public function list() {
         $model = new EtudiantsModel();
         $data['etudiants'] = $model->getEtudiants();
-        $data['title'] = 'Liste des étudiants';
+        $data['title'] = 'SysInfo - Etudiants';
+        $data['titre'] = 'Liste des étudiants';
         return view('etudiants/list', $data);
     }
 
