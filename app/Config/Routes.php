@@ -7,4 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'UsersController::index');
 $routes->post('/login', 'UsersController::login');
-$routes->get('/etudiants', 'EtudiantController::list');
+$routes->get('/etudiants', 'EtudiantController::listPaginated');

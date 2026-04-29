@@ -29,5 +29,5 @@ class EtudiantsModel extends Model
         return $this->paginate($perPage, 'default', $page);
     }
 
-    
+
 }

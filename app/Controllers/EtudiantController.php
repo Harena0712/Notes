@@ -19,6 +19,6 @@ class EtudiantController extends BaseController
         $data['etudiants'] = $model->paginateEtudiants($perPage, $page);
         $data['pager'] = $model->pager;
         $data['title'] = 'Liste des étudiants paginée';
-        return view('etudiants/list_paginated', $data);
+        return view('etudiants/list', $data);
     }
 }
