@@ -11,4 +11,13 @@ class EtudiantController extends BaseController
         $data['title'] = 'Liste des étudiants';
         return view('etudiants/list', $data);
     }
+
+    public function listPaginated($page = 1) {
+        $model = new EtudiantsModel();
+        $perPage = 10;
+        $data['etudiants'] = $model->paginateEtudiants($perPage, $page);
+        $data['pager'] = $model->pager;
+        $data['title'] = 'Liste des étudiants paginée';
+        return view('etudiants/list_paginated', $data);
+    }
 }
